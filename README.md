@@ -3,6 +3,7 @@ Practical tasks in ship monitoring, including Curriculum Learning, Full type cla
 
 ## Curriculum Learning
 1.First you need to manually split the original dataset into subsets of data with increasing difficulty levels, e.g. subset 1, subset 2, etc.
+
 <img src="https://github.com/axun2001/Ship-monitoring-systems/blob/main/images/1.png" width="600">
 
 - Data Set Structure
@@ -58,4 +59,20 @@ After the run, the optimal weight parameter file is saved, as well as the confid
 
 ## Adversarial Attack Training
 
+I'll add more later when I'm done...
+
 ## Visualization of Result
+
+1.Regarding the scripts mentioned in the previous section, here are the [txt](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/test.txt) and [csv](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/resnet34.csv) files used as examples, which can be loaded directly into [compare.py](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/compare.py) for testing.
+
+2.The three scripts ([plt-curve](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/plt-curve.py), [plt-pr](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/plt-pr.py), [plt-roc](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/plt-roc.py)) are used to plot curves for various metrics, such as accuracy, average ROC curve, average PR curve, and so on. However, it should be noted that the corresponding csv files need to be loaded when using the scripts.
+
+3.[Loss landscape](https://github.com/okn-yu/Visualizing-the-Loss-Landscape-of-Neural-Nets/tree/master):For visualizing the loss function, you can refer to another project for details on how to do this.We extracted the coordinate points from the obtained h5 file and plotted them to get the 2D as well as 3D loss function images respectively
+
+<img src="https://github.com/axun2001/Ship-monitoring-systems/blob/main/images/7.png" width="400">
+<img src="https://github.com/axun2001/Ship-monitoring-systems/blob/main/images/8.png" width="400">
+
+The vtp file obtained through further operations can be imported into the software "[Paraview](https://www.paraview.org/download/)" for rendering. After rendering, the loss function is more detailed and realistic.
+
+<img src="https://github.com/axun2001/Ship-monitoring-systems/blob/main/images/124123423.png" width="400">
+<img src="https://github.com/axun2001/Ship-monitoring-systems/blob/main/images/2131314.png" width="400">
