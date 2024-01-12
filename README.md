@@ -36,6 +36,26 @@ After the code is run, a .csv file of the following form will be obtained (verti
 
 ## Full Type Classification-Few shots Learning
 
+1.The main focus of the task is on the training strategy, and the only parts that need to be adjusted are in the [Siamese-Train.py](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Full%20Type%20Classification/Siamese-Train.py), the dataset paths, and the parameters (margin, optimizer, dimensionality of the output feature vector)
+
+```
+lr = 0.001
+
+embedding_dim = 2048
+
+Margin = 0.875
+
+batch_size = 32
+
+num_epochs = 30
+```
+
+After the run, the optimal weight parameter file is saved, as well as the confidence csv file for each of the output images.
+
+2.At this point we use [CreateDataset.py](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Curriculum%20Learning/CreateDataset.py) to generate the image path with the real label of the image.
+
+3.Load the previously obtained txt file and csv file into [compare.py](https://github.com/axun2001/Ship-monitoring-systems/blob/main/Visualization%20of%20Results/compare.py) and run it to get the Confusion Matrix, the ROC curve, the PR curve, and the Average PR curve.
+
 ## Adversarial Attack Training
 
 ## Visualization of Result
